@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
 import io.restassured.RestAssured;
+import io.restassured.config.RestAssuredConfig;
+import io.restassured.config.SSLConfig;
 import io.restassured.response.Response;
 import junit.framework.Assert;
 import static org.assertj.core.api.Assertions.*;
@@ -13,7 +15,7 @@ import static org.assertj.core.api.Assert.*;
 public class TesteAPI {
 
 	@org.junit.Test
-	public void teste1() {
+	public void getResponse() {
 		// import not static
 		//Response response = RestAssured.get("http://services.groupkt.com/country/get/iso2code/IN");
 		
@@ -35,6 +37,26 @@ public class TesteAPI {
 
 	}
 	
+	
+	@org.junit.Test
+	public void setParameters()
+	{
+		//If you have to pass some parameters to a URI, u can send like this:
+		// Given has everything i have to pass before to send a GET request to the API
+		//in this case i have to pass the parameters
+		String uri = "https://postman-echo.com/get";
+		
+		// If i dont use this method, my uri https will return connection refuse
+		RestAssured.useRelaxedHTTPSValidation();
+		
+		given()
+		.param("foo1", "bar1")
+		.param("foo2", "bar2")
+			.when().get(uri)
+			.then().statusCode(200);
+		
+		
+	}
 	public void validateStatus(int status, Response teste)
 	{
 		Assert.assertEquals(teste.getStatusCode(), status);
