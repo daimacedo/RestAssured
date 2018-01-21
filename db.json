@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 5,
-      "title": "Os homens que nao amavama as mulhres",
-      "author": "Teste"
+      "title": "Macarronada da hora",
+      "author": "Daiane Macedo"
     },
     {
       "id": 9,
@@ -17,18 +17,18 @@
     },
     {
       "id": 21,
-      "title": "Os homens que nao amavama as mulhres",
-      "author": "Teste"
+      "title": "Vai que Vai",
+      "author": null
     },
     {
       "id": 2,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Vai que Vai",
+      "author": null
     },
     {
       "id": 1,
-      "title": "Os homens que nao amavama as mulhres",
-      "author": "Teste"
+      "title": "Vai que Vai",
+      "author": null
     }
   ],
   "comments": [],
